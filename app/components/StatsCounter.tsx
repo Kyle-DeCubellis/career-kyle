@@ -73,7 +73,7 @@ export default function StatsCounter() {
             <div
               className="text-5xl md:text-6xl font-bold leading-none"
               style={{
-                color: '#4a9eff',
+                color: '#1e3a5f',
                 fontVariantNumeric: 'tabular-nums',
                 fontFeatureSettings: '"tnum"',
                 letterSpacing: '-0.02em',
@@ -83,7 +83,7 @@ export default function StatsCounter() {
             </div>
             <div
               className="text-xs mt-2 uppercase tracking-widest"
-              style={{ color: '#4a6080' }}
+              style={{ color: '#9ca3af' }}
             >
               {stat.label}
             </div>
