@@ -3,7 +3,7 @@ import CareerTimeline from './components/CareerTimeline';
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#0a0f1e", color: "#f0f4ff" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#ffffff", color: "#1a1a1a" }}>
       <main className="max-w-3xl mx-auto px-6 py-16 md:py-24">
 
         {/* Hero */}
@@ -11,10 +11,10 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
             Kyle DeCubellis
           </h1>
-          <p className="text-lg md:text-xl font-medium mb-6" style={{ color: "#4a9eff" }}>
+          <p className="text-lg md:text-xl font-medium mb-6" style={{ color: "#1e3a5f" }}>
             VP of Product &nbsp;|&nbsp; Hardware Leader &nbsp;|&nbsp; Builder
           </p>
-          <p className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl" style={{ color: "#c0ccdf" }}>
+          <p className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl" style={{ color: "#6b7280" }}>
             15+ years building consumer electronics products from concept to
             mass production. 5 patents. Currently building iOS/Android apps with
             AI.
@@ -42,7 +42,7 @@ export default function Home() {
         {/* About */}
         <section className="mb-20">
           <SectionLabel>About</SectionLabel>
-          <p className="text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: "#c0ccdf" }}>
+          <p className="text-base md:text-lg leading-relaxed max-w-2xl" style={{ color: "#6b7280" }}>
             Product and hardware leader who&apos;s built and scaled consumer
             electronics at Bose, Hatch, and Raycon. I build product orgs, manage
             China manufacturing, ship physical products at scale, and use AI
@@ -65,16 +65,16 @@ export default function Home() {
           <SectionLabel>Current Projects</SectionLabel>
           <div className="space-y-4">
             <ProjectCard
-              title="Raycon Tunes"
-              description="Cross-platform iOS/Android BLE audio companion app. 14 device integrations across 7 chipsets. Built solo using Claude Code."
+              title="AI-Powered Product Operations"
+              description="Built automated VOC analysis, competitive intelligence agents, and generative content pipelines reducing operational workload 87%."
             />
             <ProjectCard
-              title="AI Product Operations"
-              description="Built automated VOC analysis, competitive intelligence agents, and generative content pipelines. 87% workload reduction."
+              title="Cross-Platform Mobile Development"
+              description="Building native iOS/Android applications using AI development tools, specializing in BLE device integrations."
             />
             <ProjectCard
-              title="Side Business"
-              description="Building websites for local businesses using Next.js, Tailwind, and Vercel."
+              title="Web Development"
+              description="Designing and deploying websites for local businesses using Next.js, Tailwind, and Vercel."
             />
           </div>
         </section>
@@ -113,7 +113,7 @@ export default function Home() {
         {/* Contact */}
         <section className="mb-16">
           <SectionLabel>Contact</SectionLabel>
-          <p className="text-base mb-6" style={{ color: "#8a9bbf" }}>
+          <p className="text-base mb-6" style={{ color: "#6b7280" }}>
             Open to conversations about product strategy, hardware, and AI.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
@@ -133,7 +133,7 @@ export default function Home() {
 
         <footer
           className="text-xs pt-8 border-t"
-          style={{ color: "#3a4a6e", borderColor: "#1a2444" }}
+          style={{ color: "#9ca3af", borderColor: "#e5e7eb" }}
         >
           Kyle DeCubellis &copy; {new Date().getFullYear()}
         </footer>
@@ -143,14 +143,14 @@ export default function Home() {
 }
 
 function Divider() {
-  return <hr className="mb-20" style={{ borderColor: "#1a2444" }} />;
+  return <hr className="mb-20" style={{ borderColor: "#e5e7eb" }} />;
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       className="text-xs font-semibold uppercase tracking-widest mb-6"
-      style={{ color: "#4a9eff" }}
+      style={{ color: "#1e3a5f" }}
     >
       {children}
     </p>
@@ -161,7 +161,7 @@ function ProjectCard({ title, description }: { title: string; description: strin
   return (
     <div className="project-card">
       <p className="text-sm font-semibold mb-2">{title}</p>
-      <p className="text-sm leading-relaxed" style={{ color: "#8a9bbf" }}>
+      <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
         {description}
       </p>
     </div>
@@ -187,7 +187,7 @@ function PatentItem({
       >
         {number}
       </a>
-      <span className="text-sm" style={{ color: "#c0ccdf" }}>
+      <span className="text-sm" style={{ color: "#6b7280" }}>
         {title}
       </span>
     </div>
