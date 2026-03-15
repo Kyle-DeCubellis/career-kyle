@@ -1,3 +1,6 @@
+import StatsCounter from './components/StatsCounter';
+import CareerTimeline from './components/CareerTimeline';
+
 export default function Home() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#0a0f1e", color: "#f0f4ff" }}>
@@ -31,6 +34,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Stats — no divider above, lets it breathe right after hero */}
+        <StatsCounter />
+
         <Divider />
 
         {/* About */}
@@ -46,39 +52,10 @@ export default function Home() {
 
         <Divider />
 
-        {/* Experience */}
+        {/* Experience — visual timeline */}
         <section className="mb-20">
           <SectionLabel>Experience</SectionLabel>
-          <div className="space-y-10">
-            <ExperienceItem
-              company="Raycon Global"
-              role="VP of Product Strategy & Operations"
-              period="2021–Present"
-              bullets={[
-                "Built product org from zero. Own P&L across 30+ SKUs.",
-                "Manage China vendor ops and manufacturing relationships.",
-                "Launched AI hardware category — 7x Kickstarter goal.",
-              ]}
-            />
-            <ExperienceItem
-              company="Hatch"
-              role="Principal Product Manager"
-              period="2020–2021"
-              bullets={[
-                "Owned #1 registered baby device in the US.",
-                "IoT/WiFi/BLE connected products. 1M+ customers.",
-              ]}
-            />
-            <ExperienceItem
-              company="Bose Corporation"
-              role="Senior Project Engineer"
-              period="2012–2020"
-              bullets={[
-                "8 years. 5 utility patents.",
-                "5M+ units shipped globally. $1B+ revenue stream.",
-              ]}
-            />
-          </div>
+          <CareerTimeline />
         </section>
 
         <Divider />
@@ -177,40 +154,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     >
       {children}
     </p>
-  );
-}
-
-function ExperienceItem({
-  company,
-  role,
-  period,
-  bullets,
-}: {
-  company: string;
-  role: string;
-  period: string;
-  bullets: string[];
-}) {
-  return (
-    <div>
-      <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-        <span className="text-base font-semibold">{company}</span>
-        <span className="text-xs font-mono" style={{ color: "#4a6080" }}>
-          {period}
-        </span>
-      </div>
-      <p className="text-sm mb-3" style={{ color: "#8a9bbf" }}>
-        {role}
-      </p>
-      <ul className="space-y-1">
-        {bullets.map((b, i) => (
-          <li key={i} className="text-sm flex gap-2" style={{ color: "#c0ccdf" }}>
-            <span style={{ color: "#2a4060" }}>—</span>
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
